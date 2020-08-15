@@ -21,74 +21,8 @@
         -->
         <div class="context">
             <img class="center" src="static/img/banner.png" alt="Trifle">
-            <ul>
-<li>Trifle v0.3.0</li>
-</ul>
-<h2>1. Introduction</h2>
-<div class="admonition warning">
-  <p class="admonition-title">Warning</p>
-  <p>This specification is incomplete and will likely be changed in the future.  Use this specification at your own risk!</p>
-</div>
-<p>Trifle is a multi-paradigm general purpose programming language that's (usually) dynamically typed and also compiled.  During compilation it scans through the code looking for any potentetial bugs and <strong>warns</strong> (it doesn't throw an error) the user about them.</p>
-<p>This specification is simple, but to understand this, I would recommend becoming familiar with a different programming language first to get the hang of programming.</p>
-<h2>2. Data Types</h2>
-<h3>2.1. Null</h3>
-<p>The <code>null</code> keyword is normally referenced as an arbitrary value where a value is undefined.</p>
-<h3>2.2. Boolean</h3>
-<p>A Boolean is a logical token referencing to either <code>true</code> or <code>false</code>.</p>
-<h3>2.3. String</h3>
-<p>A String is a sequence of zero or more characters, normally wrapped in single (<code>'</code>) or double (<code>&quot;</code>) quotes, like so: <code>&quot;This is a string.&quot;</code>.  Strings usually represent text.</p>
-<h3>2.4. Number</h3>
-<p>A Number represents either a single number (<code>0</code>, <code>1</code>, <code>1234567890</code>, ...) or the sum of a mathematical expression (<code>1 * 2</code>).</p>
-<h4>2.4.1. Mathematical Operators</h4>
-<p>Mathematical operators include:</p>
-<ul>
-<li><code>N + x</code>: Adds x to N.</li>
-<li><code>N - x</code>: Subtracts x from N.</li>
-<li><code>N * x</code>: Multiplies N by x.</li>
-<li><code>N / x</code>: Divides N by x.</li>
-<li><code>N % x</code>: Represents the remainer of N divided by x. (<code>N / x</code>)</li>
-<li><code>N++</code>: Adds <code>1</code> to <code>N</code>.</li>
-<li><code>N--</code>: Subtracts <code>1</code> from <code>N</code>.</li>
-<li><code>N += x</code>: Adds x to N.</li>
-<li><code>N -= x</code>: Subtracts x from N.</li>
-</ul>
-<h3>2.5. Value Operators</h3>
-<p>Value operators tell the interpreter that a value is being defined.  They will always start with the <code>@</code> symbol, such as <code>@func</code> or <code>@class</code>.</p>
-<h3>2.6. Variables</h3>
-<p>Variables reference a variable identifier (E.G. <code>$NAME</code>) to a value:</p>
-<pre><code class="language-trifle"><span>$</span><span>&lt;</span><span class="iden">IDENTIFIER</span><span>&gt;</span> <span>=</span> <span>&lt;</span><span class="iden">VALUE</span><span>&gt;</span><span>;</span>
-</code></pre>
-<p>Where <code>&lt;VALUE&gt;</code> is an object and $NAME is a variable identifier.  It requires a <code>;</code> at the end.</p>
-<pre><code class="language-trifle"><span>$</span><span class="iden">myVar</span> <span>=</span> <span class="number">1</span><span>;</span>
-</code></pre>
-<p>Which can later be referenced as <code>$NAME</code>,</p>
-<pre><code class="language-trifle"><span class="function">someFunction</span><span>(</span><span>$</span><span class="iden">myVar</span><span>)</span><span>;</span>
-</code></pre>
-<h3>2.6. Function</h3>
-<p>Functions are macros that can be repeated and modified using parameters.</p>
-<h4>2.6.1. Function Definitions</h4>
-<p>Functions can be defined using Trifle's <code>func</code> value operator, followed by a function identifier, an argument list and a code block to be executed when the function runs.</p>
-<pre><code class="language-trifle"><span>@</span><span class="keyword">func</span> <span>&lt;</span><span class="iden">IDENTIFIER</span><span>&gt;</span><span>(</span><span>.</span><span>.</span><span>.</span><span>)</span> <span>{</span>
-    <span class="comment">// ...</span>
-<span>}</span>
-</code></pre>
-<p>For example:</p>
-<pre><code class="language-trifle"><span>@</span><span class="keyword">func</span> <span class="function">myFunctionName</span><span>(</span><span>$</span><span class="iden">value</span><span>)</span> <span>{</span>
-    <span class="comment">// ...</span>
-<span>}</span>
-</code></pre>
-<h4>2.6.2. Function Calls</h4>
-<p>Functions are called like they would be defined, minus the <code>func</code> value operator and code block.</p>
-<pre><code class="language-trifle"><span>&lt;</span><span class="iden">IDENTIFIER</span><span>&gt;</span><span>(</span><span>.</span><span>.</span><span>.</span><span>)</span><span>;</span>
-</code></pre>
-<p>Example:</p>
-<pre><code class="language-trifle"><span>@</span><span class="keyword">func</span> <span class="function">myFunctionName</span><span>(</span><span>$</span><span class="iden">value</span><span>)</span> <span>{</span>
-    <span class="comment">// ...</span>
-<span>}</span>
-<span class="function">myFunctionName</span><span>(</span><span class="string">&quot;a string&quot;</span><span>)</span><span>;</span>
-</code></pre>
-<h2>3.</h2>
+            <h2>Trifle Programming Language</h2>
+<p>The Trifle language specification is incomplete, but if you want to see the incomplete version, visit <a href="/specification/draft.html">the draft page</a>.</p>
 
         </div>
     </body>
