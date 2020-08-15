@@ -61,21 +61,21 @@
 <h2>3.3. String</h2>
 <p>The String type is a sequence or group of one or more characters.</p>
 <pre><code>&lt;quote1&gt;   ::= &quot;\&quot;&quot;
-&lt;quite3&gt;   ::= &quot;'&quot;
+&lt;quite2&gt;   ::= &quot;'&quot;
 
 &lt;charset1&gt; ::= &lt;CharSet&gt; - &lt;quote1&gt; | &quot;\\\&quot;&quot;
-&lt;charset3&gt; ::= &lt;CharSet&gt; - &lt;quote3&gt; | &quot;\\'&quot;
+&lt;charset2&gt; ::= &lt;CharSet&gt; - &lt;quote2&gt; | &quot;\\'&quot;
 
 &lt;chars1&gt;   ::= &lt;charset1&gt; | &lt;chars1&gt;&lt;charset1&gt;
-&lt;chars3&gt;   ::= &lt;charset3&gt; | &lt;chars3&gt;&lt;charset3&gt;
+&lt;chars2&gt;   ::= &lt;charset2&gt; | &lt;chars2&gt;&lt;charset2&gt;
 
 &lt;empty1&gt;   ::= &lt;quote1&gt;&lt;quote1&gt;
-&lt;empty3&gt;   ::= &lt;quote3&gt;&lt;quote3&gt;
+&lt;empty2&gt;   ::= &lt;quote2&gt;&lt;quote2&gt;
 
 &lt;string1&gt;  ::= &lt;empty1&gt; | &lt;quote1&gt;&lt;chars1&gt;&lt;quote1&gt;
-&lt;string3&gt;  ::= &lt;empty3&gt; | &lt;quote3&gt;&lt;chars3&gt;&lt;quote3&gt;
+&lt;string2&gt;  ::= &lt;empty2&gt; | &lt;quote2&gt;&lt;chars2&gt;&lt;quote2&gt;
 
-&lt;string&gt;   ::= &lt;string1&gt; | &lt;string3&gt;
+&lt;string&gt;   ::= &lt;string1&gt; | &lt;string2&gt;
 </code></pre>
 <p>For example, a string might look like:</p>
 <pre><code class="language-trifle"><span class="string">&quot;Hello, world!&quot;</span>
