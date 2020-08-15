@@ -4,6 +4,7 @@
         <title>Trifle Language Specification</title>
         <link rel="stylesheet" href="static/css/background.css">
         <link rel="stylesheet" href="static/css/syntax.css">
+        <!-- Specification made by Zack Pace -->
     </head>
     <body>
         <!--
@@ -21,9 +22,47 @@
         -->
         <div class="context">
             <img class="center" src="static/img/banner.png" alt="Trifle">
-            <h1>1. Introduction</h1>
-<p>This specification defines the Trifle programming language.  It's a general purpose multi-paradigm programming language that can either be statically or dynamically typed.</p>
-<h2>1.1. Scope</h2>
+            <ul>
+<li>v0.0.1</li>
+</ul>
+<h1>1. Introduction</h1>
+<p>This specification defines the Trifle programming language and it's grammars.</p>
+<h2>1.1. Changes</h2>
+<p>As this is an alpha version of the Trifle specification, there are technically no changes made in this specification and it will be used as a base for future versions of the specification.</p>
+<h1>2. Data Types</h1>
+<h2>2.0. Null</h2>
+<p>The Null type represents an arbitrary or undefined value.</p>
+<pre><code>&lt;null&gt; ::= &quot;null&quot;
+</code></pre>
+<h2>2.1. Boolean</h2>
+<p>Booleans are literal tokens that represent <code>1</code> or <code>0</code>, <code>true</code> or <code>false</code>.</p>
+<pre><code>&lt;boolean&gt; ::= &quot;true&quot; | &quot;false&quot;
+</code></pre>
+<h2>2.2. Number</h2>
+<p>The Number type represents a group of one or more digits.</p>
+<pre><code>&lt;digit&gt;  ::= { 0..9 }
+&lt;digits&gt; ::= &lt;digit&gt; | &lt;digits&gt;&lt;digit&gt;
+</code></pre>
+<h3>2.2.1. Integer</h3>
+<p>An Integer has no floating point, which means it's just <code>&lt;digits&gt;</code>.</p>
+<h3>2.2.2. Float (Floating point integer)</h3>
+<p>The Float type has a floating point followed by another set of digits.</p>
+<pre><code>&lt;decimal&gt; ::= &quot;.&quot;
+&lt;float&gt;   ::= &lt;digits&gt;&lt;decimal&gt;&lt;digits&gt;
+</code></pre>
+<h3>2.2.3. Grammar</h3>
+<p>The Number type could be represented by <code>&lt;number&gt;</code>.</p>
+<pre><code>&lt;number&gt; ::= &lt;digits&gt; | &lt;float&gt;
+</code></pre>
+<h2>2.3. String</h2>
+<p>The String type is a sequence or group of one or more characters.</p>
+<pre><code>&lt;string&gt; ::= &lt;Quote1&gt;&lt;CharSet&gt;&lt;Quote1&gt; | &lt;Quote2&gt;&lt;CharSet&gt;&lt;Quote2&gt;
+</code></pre>
+<p>For example, a string might look like:</p>
+<pre><code class="language-trifle"><span class="string">&quot;Hello, world!&quot;</span>
+</code></pre>
+<h2>2.4. Object</h2>
+<p>An Object is a theoretical type that represents any value.  If a value's type is defined explicitly as <code>object</code>, it will accept any value.</p>
 
         </div>
     </body>
