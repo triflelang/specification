@@ -1,0 +1,2 @@
+item = "ARRAY";
+print(item, [item, item, [item]], item, item);

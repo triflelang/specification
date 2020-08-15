@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap');
+
+code {
+    font-family: 'Fira Mono', monospace;
+    color: #333333;
+    display: inline-block;
+    background-color: #ededed;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 2px;
+    padding-top: 0px;
+    font-size: 16px;
+}
+
+pre code {
+    display: block;
+    background-color: #ededed;
+    border: none;
+    border-radius: 0px;
+    padding: 9px;
+    padding-left: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comment {
+    color: slategray;
+}
+
+.punctuation {
+	color: #999;
+}
+
+.function {
+	color: #DD4A68; 
+}
+
+.boolean, .number {
+    color: #905;
+}
+
+.string {
+    color: #669900;
+}
+
+.keyword {
+	color: #07a;
+}
+
+.var {
+    color: #e90;
+}

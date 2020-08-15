@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /*font-family: Arial, x-locale-body, sans-serif;*/
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 25.6px;
+    color: #333333;
+    background-color: #ffa154;
+}
+
+h1 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+h4 {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+h5 {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h6 {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+.context {
+    margin: 0;
+    width: 60%;
+    left: 20%;
+    padding: 1%;
+    background: #fff;
+    position: absolute;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+li::marker {
+    font-weight: bold;
+}
+
+.admonition {
+    padding: 0 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    text-align: left;
+}
+
+.admonition-title {
+    font-weight: bold;
+    text-align: left;
+}
+
+.admonition {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: block;
+}
+
+.admonition.note, .admonition.info, .admonition.tips {
+    color: #1d6fa5;
+    background-color: #a0cfee;
+    border-color: #3498db;
+}
+.admonition.warning, .admonition.warn, .admonition.important {
+    color: #a85913;
+    background-color: #f3c195;
+    border-color: #e67e22;
+}
+.admonition.danger, .admonition.critical {
+    color: #bf2718;
+    background-color: #f5b4ae;
+    border-color: #e74c3c;
+}
+
+ /* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 10%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 10%;
+    color: white;
+    background-color: white;
+    color: black;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 10px;
+    padding-top: 20px;
+}
+  
+/* The navigation menu list */
+.sidenavlist {
+    list-style: none;
+}
+
+.sidenavheader {
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* The navigation menu links */
+.sidenava {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 14px;
+    display: block;
+    color: #222;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidenava:hover {
+    color: #555;
+}
+  
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
