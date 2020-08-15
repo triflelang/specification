@@ -29,39 +29,58 @@
 <p>This specification defines the Trifle programming language and it's grammars.</p>
 <h2>1.1. Changes</h2>
 <p>As this is an alpha version of the Trifle specification, there are technically no changes made in this specification and it will be used as a base for future versions of the specification.</p>
-<h1>2. Data Types</h1>
-<h2>2.0. Null</h2>
+<h1>2. BNF Notation</h1>
+<p>This specification uses an augmented version of the BNF grammar notation.</p>
+<h2>2.1. <code>&lt;CharSet&gt;</code></h2>
+<p>The Unicode charset. (Including UTF-8, UTF-16, and UTF-32)</p>
+<h1>3. Data Types</h1>
+<h2>3.0. Null</h2>
 <p>The Null type represents an arbitrary or undefined value.</p>
 <pre><code>&lt;null&gt; ::= &quot;null&quot;
 </code></pre>
-<h2>2.1. Boolean</h2>
+<h2>3.1. Boolean</h2>
 <p>Booleans are literal tokens that represent <code>1</code> or <code>0</code>, <code>true</code> or <code>false</code>.</p>
 <pre><code>&lt;boolean&gt; ::= &quot;true&quot; | &quot;false&quot;
 </code></pre>
-<h2>2.2. Number</h2>
+<h2>3.2. Number</h2>
 <p>The Number type represents a group of one or more digits.</p>
 <pre><code>&lt;digit&gt;  ::= { 0..9 }
 &lt;digits&gt; ::= &lt;digit&gt; | &lt;digits&gt;&lt;digit&gt;
 </code></pre>
-<h3>2.2.1. Integer</h3>
+<h3>3.2.1. Integer</h3>
 <p>An Integer has no floating point, which means it's just <code>&lt;digits&gt;</code>.</p>
-<h3>2.2.2. Float (Floating point integer)</h3>
+<h3>3.2.2. Float (Floating point integer)</h3>
 <p>The Float type has a floating point followed by another set of digits.</p>
 <pre><code>&lt;decimal&gt; ::= &quot;.&quot;
 &lt;float&gt;   ::= &lt;digits&gt;&lt;decimal&gt;&lt;digits&gt;
 </code></pre>
-<h3>2.2.3. Grammar</h3>
+<h3>3.2.3. Grammar</h3>
 <p>The Number type could be represented by <code>&lt;number&gt;</code>.</p>
 <pre><code>&lt;number&gt; ::= &lt;digits&gt; | &lt;float&gt;
 </code></pre>
-<h2>2.3. String</h2>
+<h2>3.3. String</h2>
 <p>The String type is a sequence or group of one or more characters.</p>
-<pre><code>&lt;string&gt; ::= &lt;Quote1&gt;&lt;CharSet&gt;&lt;Quote1&gt; | &lt;Quote2&gt;&lt;CharSet&gt;&lt;Quote2&gt;
+<pre><code>&lt;quote1&gt;   ::= &quot;\&quot;&quot;
+&lt;quite3&gt;   ::= &quot;'&quot;
+
+&lt;charset1&gt; ::= &lt;CharSet&gt; - &lt;quote1&gt; | &quot;\\\&quot;&quot;
+&lt;charset3&gt; ::= &lt;CharSet&gt; - &lt;quote3&gt; | &quot;\\'&quot;
+
+&lt;chars1&gt;   ::= &lt;charset1&gt; | &lt;chars1&gt;&lt;charset1&gt;
+&lt;chars3&gt;   ::= &lt;charset3&gt; | &lt;chars3&gt;&lt;charset3&gt;
+
+&lt;empty1&gt;   ::= &lt;quote1&gt;&lt;quote1&gt;
+&lt;empty3&gt;   ::= &lt;quote3&gt;&lt;quote3&gt;
+
+&lt;string1&gt;  ::= &lt;empty1&gt; | &lt;quote1&gt;&lt;chars1&gt;&lt;quote1&gt;
+&lt;string3&gt;  ::= &lt;empty3&gt; | &lt;quote3&gt;&lt;chars3&gt;&lt;quote3&gt;
+
+&lt;string&gt;   ::= &lt;string1&gt; | &lt;string3&gt;
 </code></pre>
 <p>For example, a string might look like:</p>
 <pre><code class="language-trifle"><span class="string">&quot;Hello, world!&quot;</span>
 </code></pre>
-<h2>2.4. Object</h2>
+<h2>3.4. Object</h2>
 <p>An Object is a theoretical type that represents any value.  If a value's type is defined explicitly as <code>object</code>, it will accept any value.</p>
 
         </div>
