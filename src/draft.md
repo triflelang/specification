@@ -52,21 +52,21 @@ The Number type could be represented by `<number>`.
 The String type is a sequence or group of one or more characters.
 ```
 <quote1>   ::= "\""
-<quite3>   ::= "'"
+<quite2>   ::= "'"
 
 <charset1> ::= <CharSet> - <quote1> | "\\\""
-<charset3> ::= <CharSet> - <quote3> | "\\'"
+<charset2> ::= <CharSet> - <quote2> | "\\'"
 
 <chars1>   ::= <charset1> | <chars1><charset1>
-<chars3>   ::= <charset3> | <chars3><charset3>
+<chars2>   ::= <charset2> | <chars2><charset2>
 
 <empty1>   ::= <quote1><quote1>
-<empty3>   ::= <quote3><quote3>
+<empty2>   ::= <quote2><quote2>
 
 <string1>  ::= <empty1> | <quote1><chars1><quote1>
-<string3>  ::= <empty3> | <quote3><chars3><quote3>
+<string2>  ::= <empty2> | <quote2><chars2><quote2>
 
-<string>   ::= <string1> | <string3>
+<string>   ::= <string1> | <string2>
 ```
 
 For example, a string might look like:
